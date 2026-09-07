@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects and open-source software by magrizzly — Web applications, CLI utilities, and experiments.">
+  <title>Projects — magrizzly</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="magrizzly homepage">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+          </svg>
+        </div>
+        <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="tools.html">Tools</a></li>
+          <li class="nav-item"><a href="notes.html">Notes</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div style="margin-bottom: 2.5rem;">
+        <span class="badge badge-primary">Portfolio & Code</span>
+        <h1 style="margin-top: 0.5rem; margin-bottom: 0.75rem;">Projects & Showcase</h1>
+        <p style="max-width: 650px;">
+          An archive of software applications, command-line utilities, web experiments, and tools built with a focus on simplicity, speed, and privacy.
+        </p>
+      </div>
+
+      <!-- Filter and Search Bar -->
+      <div class="filter-bar">
+        <div class="search-box">
+          <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" id="projectSearch" class="search-input" placeholder="Search projects by name, keyword, or tech..." autocomplete="off">
+        </div>
+
+        <div class="tag-filter-group">
+          <button class="filter-chip active" data-tag="all">All</button>
+          <button class="filter-chip" data-tag="web">Web Apps</button>
+          <button class="filter-chip" data-tag="cli">CLI & Scripts</button>
+          <button class="filter-chip" data-tag="security">Security & Privacy</button>
+          <button class="filter-chip" data-tag="experiments">Experiments</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsContainer">
+        <!-- Project 1 -->
+        <article class="project-card" data-tags="web,security,tools" data-title="Client-side Crypto Suite" data-desc="Zero-telemetry cryptographic utilities running purely in the browser via Web Crypto API.">
+          <div class="project-card-top">
+            <span class="badge badge-primary">Web App</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Active</span>
+          </div>
+          <h2 class="project-card-title">Client-Side Crypto Suite</h2>
+          <p class="project-card-desc">
+            A privacy-first suite of cryptographic tools including SHA-256 / SHA-512 hashing, Base64/URL encoders, and password entropy estimators running 100% in memory.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">WebCrypto</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">HTML5</span>
+          </div>
+          <div class="project-actions">
+            <a href="tools.html" class="btn btn-sm btn-primary">Live Tool</a>
+            <a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Source</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-tags="cli,tools" data-title="Devbox Dotfiles & Setup" data-desc="Reproducible configuration management scripts and dotfiles for modern Unix environments.">
+          <div class="project-card-top">
+            <span class="badge">CLI & Scripts</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Maintained</span>
+          </div>
+          <h2 class="project-card-title">Devbox Dotfiles & Setup</h2>
+          <p class="project-card-desc">
+            Modular shell scripts and configuration files for Git, Zsh, Tmux, and Neovim designed for fast bootstrap on Linux and macOS environments.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Bash</span>
+            <span class="project-tag">Zsh</span>
+            <span class="project-tag">Lua</span>
+          </div>
+          <div class="project-actions">
+            <a href="notes.html" class="btn btn-sm btn-primary">View Cheatsheet</a>
+            <a href="https://github.com/magrizzly" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-tags="web,experiments" data-title="Minimalist Web Portal" data-desc="Lightning fast static personal landing site and dashboard built with zero dependencies.">
+          <div class="project-card-top">
+            <span class="badge badge-primary">Web App</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">v1.0</span>
+          </div>
+          <h2 class="project-card-title">Minimalist Web Portal</h2>
+          <p class="project-card-desc">
+            The website you are currently viewing! Engineered without heavy JavaScript frameworks, achieving 100/100 Lighthouse performance scores and instant static rendering.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">CSS3</span>
+            <span class="project-tag">Vanilla JS</span>
+            <span class="project-tag">GitHub Pages</span>
+          </div>
+          <div class="project-actions">
+            <a href="index.html" class="btn btn-sm btn-primary">Home Hub</a>
+            <a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">Source</a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card" data-tags="cli,security" data-title="Pinger & Net Monitor" data-desc="Lightweight network latency and port availability probing script.">
+          <div class="project-card-top">
+            <span class="badge">CLI & Scripts</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Utility</span>
+          </div>
+          <h2 class="project-card-title">Pinger & Net Monitor</h2>
+          <p class="project-card-desc">
+            A small asynchronous Python script to monitor packet health, DNS propagation, and TCP handshake latency across multiple servers with terminal bar charts.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Networking</span>
+            <span class="project-tag">AsyncIO</span>
+          </div>
+          <div class="project-actions">
+            <a href="notes.html" class="btn btn-sm btn-primary">Read Guide</a>
+            <a href="https://github.com/magrizzly" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-secondary">GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card" data-tags="web,tools" data-title="JSON Schema & Formatter" data-desc="Interactive syntax validator and tree viewer for debugging payload schemas.">
+          <div class="project-card-top">
+            <span class="badge badge-primary">Web App</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Built-in</span>
+          </div>
+          <h2 class="project-card-title">JSON Formatter & Inspector</h2>
+          <p class="project-card-desc">
+            Fast client-side JSON indentation, minification, and schema validation with real-time error position detection and one-click clipboard copying.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">JSON</span>
+            <span class="project-tag">Tools</span>
+            <span class="project-tag">Offline</span>
+          </div>
+          <div class="project-actions">
+            <a href="tools.html" class="btn btn-sm btn-primary">Open Tool</a>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card" data-tags="experiments,security" data-title="Zero-Storage Scratchpad" data-desc="Local-only temporary clipboard and note-taking buffer stored strictly in browser localStorage.">
+          <div class="project-card-top">
+            <span class="badge">Experiments</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Prototype</span>
+          </div>
+          <h2 class="project-card-title">Zero-Storage Scratchpad</h2>
+          <p class="project-card-desc">
+            A distraction-free markdown notepad with live character/word count and instantaneous auto-saving to browser storage without hitting any backend servers.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">localStorage</span>
+            <span class="project-tag">Markdown</span>
+            <span class="project-tag">Zero-Cloud</span>
+          </div>
+          <div class="project-actions">
+            <a href="tools.html" class="btn btn-sm btn-primary">Try Scratchpad</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Empty state when search yields no matches -->
+      <div id="noProjectsMessage" style="display: none; text-align: center; padding: 4rem 1rem;">
+        <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--text-muted); margin-bottom: 1rem;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h3 style="margin-bottom: 0.5rem;">No matching projects found</h3>
+        <p style="color: var(--text-muted);">Try searching for a different keyword or selecting another tag.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
+          </div>
+          <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+        </a>
+        <p>Personal digital portal hosted securely on GitHub Pages. Respects visitor privacy with zero tracking scripts.</p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="notes.html">Notes</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4>Knowledge</h4>
+          <ul>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About & Stack</a></li>
+            <li><a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer">Source Code ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span id="currentYear">2026</span> magrizzly. Hosted on GitHub Pages.</div>
+      <div>Open Source (MIT) · No cookies · No trackers</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.initFilterableGrid({
+        searchInputId: 'projectSearch',
+        filterChipSelector: '.tag-filter-group .filter-chip',
+        itemSelector: '.projects-grid .project-card',
+        titleSelector: '.project-card-title',
+        descSelector: '.project-card-desc',
+        emptyStateId: 'noProjectsMessage'
+      });
+    });
+  </script>
+</body>
+</html>

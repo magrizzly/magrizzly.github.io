@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About magrizzly — Software engineering ethos, tech stack, and development principles.">
+  <title>About & Tech Stack — magrizzly</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="magrizzly homepage">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+          </svg>
+        </div>
+        <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="tools.html">Tools</a></li>
+          <li class="nav-item"><a href="notes.html">Notes</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div style="margin-bottom: 2.5rem;">
+        <span class="badge badge-primary">Profile & Principles</span>
+        <h1 style="margin-top: 0.5rem; margin-bottom: 0.75rem;">About & Tech Stack</h1>
+        <p style="max-width: 650px;">
+          Software engineering ethos, technical toolkit, and privacy-respecting architectural principles behind the magrizzly hub.
+        </p>
+      </div>
+
+      <!-- Overview Grid -->
+      <div class="profile-overview">
+        <div class="about-card">
+          <h2 style="font-size: 1.4rem; margin-bottom: 1rem;">Who is <span class="text-gradient">magrizzly</span>?</h2>
+          <p>
+            I am a software engineer, tinkerer, and open-source enthusiast passionate about high-efficiency systems, clean user interfaces, and preserving digital autonomy.
+          </p>
+          <p>
+            This website serves as my public home base on the open web. It contains interactive utilities, software projects, and quick reference materials without the tracking scripts, heavy client bundles, or invasive data harvesting that dominate modern web properties.
+          </p>
+
+          <h3 style="font-size: 1.2rem; margin-top: 2rem; margin-bottom: 0.75rem;">Core Principles</h3>
+          <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.25rem;">
+            <li><strong>Privacy First:</strong> No analytics trackers, no telemetry pixels, and no ad beacons. Client tools run directly inside your browser.</li>
+            <li><strong>Minimalism & Speed:</strong> Prefer zero-build vanilla standards over cumbersome framework bloat whenever appropriate.</li>
+            <li><strong>Open Source & Reproducibility:</strong> All code hosted here is open for review, auditing, and learning.</li>
+            <li><strong>Long-Term Durability:</strong> Standard HTML/CSS never goes out of fashion or breaks due to abandoned npm packages.</li>
+          </ul>
+        </div>
+
+        <div class="about-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h2 style="font-size: 1.25rem; margin-bottom: 1rem;">Public Hub Info</h2>
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.92rem;">
+              <div>
+                <span style="color: var(--text-muted); display: block; font-size: 0.8rem; text-transform: uppercase;">Handle</span>
+                <strong>magrizzly</strong>
+              </div>
+              <div>
+                <span style="color: var(--text-muted); display: block; font-size: 0.8rem; text-transform: uppercase;">Host Platform</span>
+                <span>GitHub Pages (Static HTTPS)</span>
+              </div>
+              <div>
+                <span style="color: var(--text-muted); display: block; font-size: 0.8rem; text-transform: uppercase;">Design Theme</span>
+                <span>Bento Grid / Dark & Light</span>
+              </div>
+              <div>
+                <span style="color: var(--text-muted); display: block; font-size: 0.8rem; text-transform: uppercase;">External Dependencies</span>
+                <span>0 (Self-contained)</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+            <a href="https://github.com/magrizzly" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+              GitHub Profile ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack & Toolkit -->
+      <section class="about-card" style="margin-bottom: 2.5rem;">
+        <h2 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Technical Toolkit & Technologies</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Languages, systems, and tools I utilize regularly for development and problem-solving.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div>
+            <h3 style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.04em;">Languages & Web</h3>
+            <div class="tech-stack-grid">
+              <span class="tech-pill">JavaScript (ES6+)</span>
+              <span class="tech-pill">HTML5 & Modern CSS3</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Shell / Bash</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">JSON / YAML</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.04em;">Systems, Cloud & Infrastructure</h3>
+            <div class="tech-stack-grid">
+              <span class="tech-pill">Linux & POSIX CLI</span>
+              <span class="tech-pill">Docker & Containers</span>
+              <span class="tech-pill">Git & GitHub Actions</span>
+              <span class="tech-pill">SSH & Cryptography</span>
+              <span class="tech-pill">Cloudflare / Edge DNS</span>
+              <span class="tech-pill">Static Site Architecture</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.04em;">Developer Environment</h3>
+            <div class="tech-stack-grid">
+              <span class="tech-pill">VS Code / Neovim</span>
+              <span class="tech-pill">Windows Terminal & Zsh</span>
+              <span class="tech-pill">Ripgrep, Fd & Bat</span>
+              <span class="tech-pill">Figma (UI Design)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
+          </div>
+          <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+        </a>
+        <p>Personal digital portal hosted securely on GitHub Pages. Respects visitor privacy with zero tracking scripts.</p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="notes.html">Notes</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4>Knowledge</h4>
+          <ul>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About & Stack</a></li>
+            <li><a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer">Source Code ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span id="currentYear">2026</span> magrizzly. Hosted on GitHub Pages.</div>
+      <div>Open Source (MIT) · No cookies · No trackers</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

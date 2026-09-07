@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="magrizzly — Personal digital portal, open-source projects, client-side web tools, and technical notes.">
+  <title>magrizzly — Personal Hub & Digital Workshop</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="magrizzly homepage">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+          </svg>
+        </div>
+        <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="tools.html">Tools</a></li>
+          <li class="nav-item"><a href="notes.html">Notes</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+          <!-- Sun Icon for Light Mode -->
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <!-- Moon Icon for Dark Mode -->
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-header-line">
+          <span class="badge-status">
+            <span class="status-dot"></span>
+            System Online & Building
+          </span>
+          <span class="badge badge-primary">GitHub Pages</span>
+          <span class="badge">Privacy First</span>
+        </div>
+
+        <h1 class="hero-title">
+          The Digital Hub of <br />
+          <span class="text-gradient">magrizzly</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          A personal portal for open-source experiments, developer tools, technical cheatsheets, and curated web resources. Built with zero tracking, zero bloat, and modern web standards.
+        </p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            Browse Projects
+          </a>
+          <a href="tools.html" class="btn btn-secondary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Open Web Utilities
+          </a>
+        </div>
+      </section>
+
+      <!-- Bento Grid Navigation & Highlights -->
+      <section class="bento-grid">
+        <!-- Card 1: Featured Project / Dashboard Highlight (8 Col) -->
+        <article class="bento-card bento-col-8">
+          <div class="card-header">
+            <div class="card-icon-wrap">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="badge badge-primary">Featured Space</span>
+          </div>
+          <h2 class="card-title">Projects & Experiments</h2>
+          <p class="card-desc">
+            A showcase of web applications, command-line utilities, automation scripts, and proof-of-concept prototypes built for reliability, efficiency, and clean code.
+          </p>
+          <div class="card-footer">
+            <span class="badge">Open Source Focus</span>
+            <a href="projects.html" class="link-arrow">
+              View Portfolio
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Interactive Terminal Overview (4 Col) -->
+        <div class="bento-card bento-col-4">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dot red"></div>
+              <div class="terminal-dot yellow"></div>
+              <div class="terminal-dot green"></div>
+              <span class="terminal-title">env.sh</span>
+            </div>
+            <div><span class="terminal-prompt">user@hub:~$</span> <span class="terminal-command">whoami</span></div>
+            <div class="terminal-output">magrizzly</div>
+            <div style="margin-top: 0.5rem;"><span class="terminal-prompt">user@hub:~$</span> <span class="terminal-command">cat /etc/manifest</span></div>
+            <div class="terminal-output">
+              host: github-pages<br>
+              telemetry: disabled<br>
+              license: MIT<br>
+              status: active
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Interactive Browser Tools (4 Col) -->
+        <article class="bento-card bento-col-4">
+          <div class="card-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+            </svg>
+          </div>
+          <h2 class="card-title">Browser Utilities</h2>
+          <p class="card-desc">
+            Fast client-side tools: JSON formatter & validator, Base64/URL converter, cryptographic hashers, and offline scratchpad.
+          </p>
+          <div class="card-footer">
+            <span class="badge badge-success">Client Side</span>
+            <a href="tools.html" class="link-arrow">
+              Launch Tools
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4: Technical Notes & Knowledge Base (4 Col) -->
+        <article class="bento-card bento-col-4">
+          <div class="card-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h2 class="card-title">Notes & Cheatsheets</h2>
+          <p class="card-desc">
+            Practical references, Git recipes, Docker snippets, Linux quick tips, and security notes for developer efficiency.
+          </p>
+          <div class="card-footer">
+            <span class="badge">Reference</span>
+            <a href="notes.html" class="link-arrow">
+              Read Notes
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 5: Curated Web Resources (4 Col) -->
+        <article class="bento-card bento-col-4">
+          <div class="card-icon-wrap">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+            </svg>
+          </div>
+          <h2 class="card-title">Curated Resources</h2>
+          <p class="card-desc">
+            A hand-picked directory of high-value developer bookmarks, privacy utilities, design systems, and technical documentation.
+          </p>
+          <div class="card-footer">
+            <span class="badge">Bookmarks</span>
+            <a href="resources.html" class="link-arrow">
+              Explore Links
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 6: Specs & Fast Numbers (12 Col) -->
+        <div class="bento-card bento-col-12">
+          <div class="card-header">
+            <div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Core Design Principles</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Crafted for longevity, speed, and absolute privacy</p>
+            </div>
+            <a href="about.html" class="btn btn-sm btn-secondary">Learn More About Stack</a>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-num text-gradient">0</div>
+              <div class="stat-label">Analytics & Trackers</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num text-gradient">&lt;50ms</div>
+              <div class="stat-label">Static Load Latency</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num text-gradient">100%</div>
+              <div class="stat-label">Client-Side Autonomy</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
+          </div>
+          <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+        </a>
+        <p>Personal digital portal hosted securely on GitHub Pages. Respects visitor privacy with zero tracking scripts.</p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="notes.html">Notes</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4>Knowledge</h4>
+          <ul>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About & Stack</a></li>
+            <li><a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer">Source Code ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span id="currentYear">2026</span> magrizzly. Hosted on GitHub Pages.</div>
+      <div>Open Source (MIT) · No cookies · No trackers</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

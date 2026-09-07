@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated bookmarks, developer references, privacy tools, and design resources by magrizzly.">
+  <title>Curated Resources — magrizzly</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="magrizzly homepage">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+          </svg>
+        </div>
+        <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="tools.html">Tools</a></li>
+          <li class="nav-item"><a href="notes.html">Notes</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div style="margin-bottom: 2.5rem;">
+        <span class="badge badge-primary">Curated Directory</span>
+        <h1 style="margin-top: 0.5rem; margin-bottom: 0.75rem;">Web Resources & Bookmarks</h1>
+        <p style="max-width: 650px;">
+          A hand-picked selection of high-signal tools, official technical documentation, privacy utilities, and open-source references.
+        </p>
+      </div>
+
+      <!-- Category 1: Documentation & Standards -->
+      <section class="resources-section">
+        <h2 class="resource-category-title">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--accent-primary);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+          Technical Documentation & Standards
+        </h2>
+        <div class="resources-grid">
+          <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              MDN Web Docs
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">The gold standard reference documentation for HTML, CSS, JavaScript, and Web APIs.</p>
+          </a>
+
+          <a href="https://devdocs.io/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              DevDocs.io
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">Fast, offline-capable unified search across dozens of developer API documentations.</p>
+          </a>
+
+          <a href="https://caniuse.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              Can I Use
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">Up-to-date browser feature support tables for modern frontend capabilities.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Category 2: Privacy & Security -->
+      <section class="resources-section">
+        <h2 class="resource-category-title">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--accent-primary);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          Privacy & Digital Security
+        </h2>
+        <div class="resources-grid">
+          <a href="https://www.privacyguides.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              Privacy Guides
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">Non-profit recommendations and guides on privacy-respecting software and services.</p>
+          </a>
+
+          <a href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              Have I Been Pwned
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">Check if your email or passwords have been compromised in known data breaches.</p>
+          </a>
+
+          <a href="https://ssd.eff.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              EFF Surveillance Self-Defense
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">Expert operational security guides for defending against online tracking and surveillance.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Category 3: Self-Hosting & Infrastructure -->
+      <section class="resources-section">
+        <h2 class="resource-category-title">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--accent-primary);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+          </svg>
+          Systems & Self-Hosting
+        </h2>
+        <div class="resources-grid">
+          <a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              Awesome Self-Hosted
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">The definitive catalog of network services and web applications that can be hosted on your own hardware.</p>
+          </a>
+
+          <a href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              Docker Hub
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">Container image registry for finding verified base systems and official software builds.</p>
+          </a>
+
+          <a href="https://kernel.org/" target="_blank" rel="noopener noreferrer" class="resource-card">
+            <div class="resource-name">
+              Linux Kernel Archives
+              <span class="link-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg></span>
+            </div>
+            <p class="resource-desc">Source repository and release milestones for the Linux operating system kernel.</p>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
+          </div>
+          <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+        </a>
+        <p>Personal digital portal hosted securely on GitHub Pages. Respects visitor privacy with zero tracking scripts.</p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="notes.html">Notes</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4>Knowledge</h4>
+          <ul>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About & Stack</a></li>
+            <li><a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer">Source Code ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span id="currentYear">2026</span> magrizzly. Hosted on GitHub Pages.</div>
+      <div>Open Source (MIT) · No cookies · No trackers</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

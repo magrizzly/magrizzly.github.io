@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Technical notes, cheatsheets, and quick reference recipes by magrizzly.">
+  <title>Notes & Cheatsheets — magrizzly</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="magrizzly homepage">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+          </svg>
+        </div>
+        <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="tools.html">Tools</a></li>
+          <li class="nav-item"><a href="notes.html">Notes</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div style="margin-bottom: 2.5rem;">
+        <span class="badge badge-primary">Knowledge Base</span>
+        <h1 style="margin-top: 0.5rem; margin-bottom: 0.75rem;">Notes & Cheatsheets</h1>
+        <p style="max-width: 650px;">
+          Curated reference snippets, command recipes, and architecture notes gathered across software engineering and system administration.
+        </p>
+      </div>
+
+      <!-- Filter and Search Bar -->
+      <div class="filter-bar">
+        <div class="search-box">
+          <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input type="text" id="noteSearch" class="search-input" placeholder="Search notes, commands, and snippets..." autocomplete="off">
+        </div>
+
+        <div class="tag-filter-group">
+          <button class="filter-chip active" data-tag="all">All</button>
+          <button class="filter-chip" data-tag="git">Git</button>
+          <button class="filter-chip" data-tag="linux">Linux & Shell</button>
+          <button class="filter-chip" data-tag="docker">Containers</button>
+          <button class="filter-chip" data-tag="security">Security</button>
+        </div>
+      </div>
+
+      <!-- Notes List -->
+      <div class="notes-list" id="notesContainer">
+        <!-- Note 1: Git -->
+        <article class="note-card" data-tags="git" data-title="Git Essential Rebase & Hygiene Recipes" data-desc="Interactive rebase, safe force pushes, squashing commits, and restoring lost branches with reflog.">
+          <div class="note-card-meta">
+            <span class="badge badge-primary">Git</span>
+            <span>Reference Cheatsheet</span>
+          </div>
+          <h2 class="note-card-title">Git Essential Rebase & Hygiene Recipes</h2>
+          <p class="note-card-snippet">
+            Key commands for keeping commit history clean, recovering accidentally dropped commits, and safely updating feature branches without noisy merge commits.
+          </p>
+          <div class="note-code-snippet">
+            <code># Safely update branch on top of main<br>
+git fetch origin<br>
+git rebase origin/main<br><br>
+# Interactive rebase for the last 4 commits (squash/fixup)<br>
+git rebase -i HEAD~4<br><br>
+# Safe push that refuses overwrite if remote has changed<br>
+git push --force-with-lease<br><br>
+# Recover lost commits or discarded stash<br>
+git reflog</code>
+          </div>
+        </article>
+
+        <!-- Note 2: Linux & Shell -->
+        <article class="note-card" data-tags="linux" data-title="Modern CLI Utilities & Replacements" data-desc="High-performance modern alternatives to classic Unix tools (eza, bat, ripgrep, fd, zoxide).">
+          <div class="note-card-meta">
+            <span class="badge">Linux & Shell</span>
+            <span>Tooling</span>
+          </div>
+          <h2 class="note-card-title">Modern CLI Utilities & Replacements</h2>
+          <p class="note-card-snippet">
+            Modern Rust and Go based CLI utilities that provide syntax highlighting, faster parallel disk crawling, and sensible defaults over legacy coreutils.
+          </p>
+          <div class="note-code-snippet">
+            <code># Modern grep: ripgrep (rg) ignores .gitignore and hidden files by default<br>
+rg "pattern" src/ --type rust<br><br>
+# Modern find: fd<br>
+fd -e md -x wc -w<br><br>
+# Modern cat: bat (with syntax highlighting and git diff margins)<br>
+bat README.md<br><br>
+# Modern ls: eza<br>
+eza -lah --icons --git</code>
+          </div>
+        </article>
+
+        <!-- Note 3: Docker & Containers -->
+        <article class="note-card" data-tags="docker" data-title="Docker Resource Pruning & Container Forensics" data-desc="Inspecting resource consumption, cleaning dangling image layers, and debugging container networking.">
+          <div class="note-card-meta">
+            <span class="badge">Containers</span>
+            <span>DevOps</span>
+          </div>
+          <h2 class="note-card-title">Docker Resource Pruning & Container Forensics</h2>
+          <p class="note-card-snippet">
+            Quick one-liners for keeping local Docker host storage trimmed and inspecting network namespaces in failing containers.
+          </p>
+          <div class="note-code-snippet">
+            <code># Reclaim space from dangling build caches and untagged images<br>
+docker system prune -a --volumes -f<br><br>
+# Inspect container resource usage stream<br>
+docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}"<br><br>
+# Spawn temporary debug container inside an existing container's network<br>
+docker run --rm -it --net=container:&lt;target_container&gt; nicolaka/netshoot</code>
+          </div>
+        </article>
+
+        <!-- Note 4: Security -->
+        <article class="note-card" data-tags="security" data-title="SSH Hardening & Key Generation Quick Guide" data-desc="Generating modern Ed25519 keys, agent forwarding safety, and disabling legacy protocols.">
+          <div class="note-card-meta">
+            <span class="badge">Security</span>
+            <span>Systems</span>
+          </div>
+          <h2 class="note-card-title">SSH Hardening & Ed25519 Key Generation</h2>
+          <p class="note-card-snippet">
+            Standard best practices for generating modern elliptic-curve keys, protecting keys with secure KDF rounds, and configuring safe client defaults.
+          </p>
+          <div class="note-code-snippet">
+            <code># Generate high-security Ed25519 key with 100 KDF rounds<br>
+ssh-keygen -t ed25519 -a 100 -C "user@device-label"<br><br>
+# Recommended ~/.ssh/config snippet<br>
+Host *<br>
+  AddKeysToAgent yes<br>
+  IdentitiesOnly yes<br>
+  StrictHostKeyChecking accept-new</code>
+          </div>
+        </article>
+      </div>
+
+      <!-- Empty state -->
+      <div id="noNotesMessage" style="display: none; text-align: center; padding: 4rem 1rem;">
+        <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: var(--text-muted); margin-bottom: 1rem;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h3 style="margin-bottom: 0.5rem;">No matching notes found</h3>
+        <p style="color: var(--text-muted);">Try searching for another keyword or selecting a different tag.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
+          </div>
+          <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+        </a>
+        <p>Personal digital portal hosted securely on GitHub Pages. Respects visitor privacy with zero tracking scripts.</p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="notes.html">Notes</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4>Knowledge</h4>
+          <ul>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About & Stack</a></li>
+            <li><a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer">Source Code ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span id="currentYear">2026</span> magrizzly. Hosted on GitHub Pages.</div>
+      <div>Open Source (MIT) · No cookies · No trackers</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.initFilterableGrid({
+        searchInputId: 'noteSearch',
+        filterChipSelector: '.tag-filter-group .filter-chip',
+        itemSelector: '.notes-list .note-card',
+        titleSelector: '.note-card-title',
+        descSelector: '.note-card-snippet',
+        emptyStateId: 'noNotesMessage'
+      });
+    });
+  </script>
+</body>
+</html>
