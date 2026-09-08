@@ -1,0 +1,663 @@
+/* ==========================================================================
+   magrizzly.co.uk/weeb — Anime & Manga Challenge Badges & Hub
+   Inspired by Magrizzly's original Carrd aesthetic (#363657 & Pastel Pink)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --weeb-bg: #363657;
+  --weeb-bg-card: rgba(43, 43, 73, 0.65);
+  --weeb-bg-card-hover: rgba(53, 53, 89, 0.85);
+  --weeb-surface: #2b2b49;
+  --weeb-border: rgba(255, 255, 255, 0.14);
+  --weeb-border-glow: rgba(255, 140, 168, 0.45);
+  
+  --weeb-pink-primary: #FF8CA8;
+  --weeb-pink-light: #FFC7D5;
+  --weeb-pink-soft: #FCB3C5;
+  --weeb-pink-glow: 0 0 20px rgba(255, 140, 168, 0.35);
+
+  --weeb-text-main: #FFFFFF;
+  --weeb-text-sub: #E2E8F0;
+  --weeb-text-muted: #A0AEC0;
+
+  --font-weeb: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius-pill: 9999px;
+  --radius-card: 16px;
+  --radius-badge: 12px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-weeb);
+  background-color: var(--weeb-bg);
+  color: var(--weeb-text-main);
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  font-size: 17px;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 10%, #464670 0%, #363657 55%, #272740 100%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Container */
+.weeb-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Floating Navigation Header */
+.weeb-header {
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.weeb-nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(36, 36, 62, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--weeb-border);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+.weeb-nav-link {
+  color: var(--weeb-text-sub);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-pill);
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.weeb-nav-link:hover {
+  color: var(--weeb-pink-primary);
+  background: rgba(255, 140, 168, 0.12);
+}
+
+.weeb-nav-link.active {
+  color: #FFFFFF;
+  background: var(--weeb-pink-primary);
+  box-shadow: 0 2px 14px rgba(255, 140, 168, 0.4);
+}
+
+.weeb-nav-link.hub-link {
+  border-left: 1px solid var(--weeb-border);
+  padding-left: 1.1rem;
+  color: var(--weeb-text-muted);
+}
+
+.weeb-nav-link.hub-link:hover {
+  color: #FFFFFF;
+}
+
+/* Main Content Area */
+.weeb-main {
+  flex: 1;
+  padding-bottom: 4rem;
+}
+
+/* Sections Transition */
+.weeb-section {
+  display: none;
+  animation: weebFadeIn 0.35s ease-out;
+}
+
+.weeb-section.active {
+  display: block;
+}
+
+@keyframes weebFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Home Section / Profile Hero
+   ========================================================================== */
+.weeb-hero {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 1.75rem;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--weeb-pink-primary), #a78bfa);
+  box-shadow: 0 0 35px rgba(255, 140, 168, 0.35);
+  transition: transform 0.3s ease;
+}
+
+.avatar-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.weeb-hero-title {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  color: var(--weeb-pink-primary);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 16px rgba(255, 140, 168, 0.3);
+}
+
+.weeb-hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--weeb-pink-light);
+  margin-bottom: 1.75rem;
+  max-width: 600px;
+}
+
+.weeb-hero-intro {
+  max-width: 680px;
+  color: var(--weeb-text-sub);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+  font-weight: 400;
+}
+
+/* Social & Anime Profile Badges (AniList / MAL / Simkl) */
+.profile-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.btn-weeb-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(43, 43, 73, 0.7);
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.btn-weeb-profile:hover {
+  color: var(--weeb-pink-primary);
+  border-color: var(--weeb-pink-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 140, 168, 0.25);
+}
+
+.btn-weeb-profile svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Quick Stats Bar */
+.weeb-stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 780px;
+  margin-top: 1.5rem;
+}
+
+.weeb-stat-box {
+  background: var(--weeb-bg-card);
+  border: 1px solid var(--weeb-border);
+  border-radius: var(--radius-card);
+  padding: 1.25rem 1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.weeb-stat-box:hover {
+  transform: translateY(-3px);
+  border-color: var(--weeb-border-glow);
+}
+
+.weeb-stat-val {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--weeb-pink-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.weeb-stat-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--weeb-pink-light);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Badges Showcase Layouts (Anime & Manga)
+   ========================================================================== */
+.badges-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.badges-main-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: var(--weeb-pink-primary);
+  margin-bottom: 0.5rem;
+}
+
+.badges-desc {
+  font-size: 1.05rem;
+  color: var(--weeb-pink-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Category Sections */
+.badge-category {
+  margin-bottom: 3.5rem;
+}
+
+.badge-category-title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--weeb-pink-soft);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge-category-count {
+  font-size: 0.85rem;
+  color: var(--weeb-text-muted);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+}
+
+.badge-subcategory-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: var(--weeb-pink-light);
+  margin: 1.75rem 0 1rem;
+}
+
+/* Badges Grid */
+.badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge-card {
+  position: relative;
+  background: var(--weeb-bg-card);
+  border: 1px solid var(--weeb-border);
+  border-radius: var(--radius-badge);
+  padding: 0.6rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.badge-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  border-color: var(--weeb-pink-primary);
+  box-shadow: 0 8px 25px rgba(255, 140, 168, 0.35);
+  background: var(--weeb-bg-card-hover);
+}
+
+.badge-thumb {
+  max-height: 120px;
+  max-width: 180px;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  object-fit: contain;
+}
+
+.badge-link-btn {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--weeb-pink-light);
+  text-decoration: none;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.badge-link-btn:hover {
+  background: var(--weeb-pink-primary);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Watched Anime & Favorites Section
+   ========================================================================== */
+.anime-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.anime-search-input {
+  background: var(--weeb-bg-card);
+  border: 1px solid var(--weeb-border);
+  border-radius: var(--radius-pill);
+  padding: 0.7rem 1.5rem;
+  color: #FFFFFF;
+  font-family: var(--font-weeb);
+  font-size: 0.95rem;
+  outline: none;
+  min-width: 280px;
+  transition: border-color 0.2s ease;
+}
+
+.anime-search-input:focus {
+  border-color: var(--weeb-pink-primary);
+}
+
+.anime-tag-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.anime-filter-btn {
+  background: var(--weeb-bg-card);
+  border: 1px solid var(--weeb-border);
+  color: var(--weeb-text-sub);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.anime-filter-btn:hover,
+.anime-filter-btn.active {
+  background: var(--weeb-pink-primary);
+  border-color: var(--weeb-pink-primary);
+  color: #FFFFFF;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.anime-card {
+  background: var(--weeb-bg-card);
+  border: 1px solid var(--weeb-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.anime-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--weeb-border-glow);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.anime-poster-wrap {
+  width: 100%;
+  height: 280px;
+  position: relative;
+  background: #202035;
+  overflow: hidden;
+}
+
+.anime-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.anime-card:hover .anime-poster {
+  transform: scale(1.05);
+}
+
+.anime-score-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(26, 26, 46, 0.85);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+}
+
+.anime-card-content {
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.anime-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.anime-genres {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.anime-genre-tag {
+  font-size: 0.72rem;
+  color: var(--weeb-pink-light);
+  background: rgba(255, 140, 168, 0.12);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   Lightbox Modal for Full-Size Badge Viewing
+   ========================================================================== */
+.weeb-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 28, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.weeb-modal.visible {
+  display: flex;
+  opacity: 1;
+}
+
+.weeb-modal-content {
+  max-width: 90vw;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  animation: modalPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.weeb-modal-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.weeb-modal-footer {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weeb-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.weeb-modal-close:hover {
+  color: var(--weeb-pink-primary);
+}
+
+/* Footer */
+.weeb-footer {
+  text-align: center;
+  padding: 2.5rem 1rem 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--weeb-text-muted);
+  font-size: 0.85rem;
+}
+
+.weeb-footer a {
+  color: var(--weeb-pink-primary);
+  text-decoration: none;
+}
+
+.weeb-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 650px) {
+  .weeb-nav-pill {
+    padding: 0.3rem 0.4rem;
+    gap: 0.2rem;
+  }
+  .weeb-nav-link {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+  }
+  .badge-thumb {
+    max-height: 90px;
+    max-width: 130px;
+  }
+  .badges-grid {
+    gap: 0.75rem;
+  }
+}
