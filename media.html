@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MageeMedia Hub — Private personal media server streaming movies, series, anime, and family photo backups powered by Jellyfin, Plex, Jellyseerr, and Immich.">
+  <title>Media Hub — Charlie's Personal Media Server</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand" aria-label="magrizzly homepage">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+          </svg>
+        </div>
+        <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="weeb/">Weeb</a></li>
+          <li class="nav-item"><a href="projects.html">Projects</a></li>
+          <li class="nav-item"><a href="tools.html">Tools</a></li>
+          <li class="nav-item"><a href="notes.html">Notes</a></li>
+          <li class="nav-item"><a href="media.html" class="active">Media</a></li>
+          <li class="nav-item"><a href="resources.html">Resources</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light theme">
+          <svg class="icon-sun" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+          <svg class="icon-moon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-header-line">
+          <span class="badge-status">
+            <span class="status-dot"></span>
+            Private Cloud &amp; Streaming
+          </span>
+          <span class="badge badge-primary">MageeMedia Network</span>
+          <span class="badge">Ad-Free &amp; Zero Tracking</span>
+        </div>
+
+        <h1 class="hero-title">
+          Welcome to the <br />
+          <span class="text-gradient">MageeMedia Hub</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Stream movies, TV series, anime, and access family photo backups across all your devices. Powered by Jellyfin, Plex, and Immich.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://mageemedia.tailcc77cc.ts.net" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Launch Jellyfin Web
+          </a>
+          <a href="http://mageemedia.tailcc77cc.ts.net:5055" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            Request Content (Jellyseerr)
+          </a>
+          <a href="#setup-guide" class="btn btn-ghost">
+            Setup &amp; FAQ ↓
+          </a>
+        </div>
+      </section>
+
+      <!-- Bento Grid: Core Services -->
+      <section class="bento-grid" aria-label="Core Media Services">
+        <!-- Card 1: Jellyfin (Primary Streaming) - 8 Col -->
+        <article class="bento-card bento-col-8">
+          <div class="card-header">
+            <div class="card-icon-wrap" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-primary);">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+              </svg>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="badge badge-primary">Primary Streaming</span>
+              <span class="badge">4K HDR</span>
+            </div>
+          </div>
+
+          <h2 class="card-title">Jellyfin</h2>
+          <p class="card-desc">
+            Open-source, ad-free streaming for films, TV series, and anime in up to 4K HDR. Built-in subtitle selection, multiple audio tracks (e.g. Japanese audio + English subtitles for anime), and hardware-accelerated playback.
+          </p>
+
+          <div style="margin-top: 0.5rem;">
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Server Address for Client Apps:</span>
+            <div class="server-address-box">
+              <code>https://mageemedia.tailcc77cc.ts.net</code>
+              <button class="copy-btn" data-copy="https://mageemedia.tailcc77cc.ts.net" aria-label="Copy Jellyfin server URL">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                </svg>
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Client App Downloads:</span>
+            <div class="app-badge-grid">
+              <a href="https://mageemedia.tailcc77cc.ts.net" target="_blank" rel="noopener noreferrer" class="app-badge-link" aria-label="Open Jellyfin Web in browser">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                </svg>
+                <span>Web Browser</span>
+              </a>
+
+              <a href="https://apps.apple.com/app/jellyfin-mobile/id1480192618" target="_blank" rel="noopener noreferrer" class="app-badge-link" aria-label="Download Jellyfin for iOS on App Store">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <span>iOS / iPadOS</span>
+              </a>
+
+              <a href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile" target="_blank" rel="noopener noreferrer" class="app-badge-link" aria-label="Download Jellyfin on Google Play">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16a1 1 0 001.524.852l13-8a1 1 0 000-1.704l-13-8A1 1 0 004 4z" />
+                </svg>
+                <span>Android / Google TV</span>
+              </a>
+
+              <a href="https://apps.apple.com/app/swiftfin/id1601048596" target="_blank" rel="noopener noreferrer" class="app-badge-link" style="border-color: rgba(99, 102, 241, 0.4);" aria-label="Download Swiftfin native player on App Store">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>Swiftfin (Apple TV / iOS Tip)</span>
+              </a>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.4rem;">
+              📺 <strong>Smart TVs:</strong> Search for <strong>Jellyfin</strong> in the app store on Roku, Amazon Fire TV, or Android TV.
+            </p>
+          </div>
+
+          <div class="card-footer" style="margin-top: 1.5rem;">
+            <span class="badge badge-success">Online &amp; Active</span>
+            <a href="https://mageemedia.tailcc77cc.ts.net" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              Open Web Player
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2: Plex (Alternative Streaming) - 4 Col -->
+        <article class="bento-card bento-col-4">
+          <div class="card-header">
+            <div class="card-icon-wrap" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="badge">Alternative Streaming</span>
+          </div>
+
+          <h2 class="card-title">Plex</h2>
+          <p class="card-desc">
+            Access the library using your existing personal Plex account. Best for older Smart TVs, PlayStation, and Xbox consoles.
+          </p>
+
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Setup Steps:</span>
+          <ol class="setup-step-list">
+            <li>Create a free account at <a href="https://www.plex.tv" target="_blank" rel="noopener noreferrer">plex.tv</a>.</li>
+            <li>Send your Plex username/email to Charlie to receive an invite to the <strong>Magee Plex</strong> library.</li>
+            <li>Accept the invite in your email or at <a href="https://app.plex.tv" target="_blank" rel="noopener noreferrer">app.plex.tv</a>.</li>
+            <li>Launch the Plex app on any TV or device and pin <strong>Films</strong>, <strong>TV</strong>, and <strong>Anime</strong>.</li>
+          </ol>
+
+          <div class="card-footer" style="margin-top: 1.5rem;">
+            <span class="badge">Consoles &amp; Smart TVs</span>
+            <a href="https://app.plex.tv" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              Open Plex
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3: Jellyseerr (Media Requests) - 6 Col -->
+        <article class="bento-card bento-col-6">
+          <div class="card-header">
+            <div class="card-icon-wrap" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-secondary);">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <span class="badge badge-primary">Request Portal</span>
+          </div>
+
+          <h2 class="card-title">Jellyseerr</h2>
+          <p class="card-desc">
+            Browse trending titles, view trailers, and request new movies or TV shows to be automatically fetched and added to the media library.
+          </p>
+
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">How to Request Content:</span>
+          <ol class="setup-step-list">
+            <li>Open the <a href="http://mageemedia.tailcc77cc.ts.net:5055" target="_blank" rel="noopener noreferrer">Jellyseerr Portal</a>.</li>
+            <li>Sign in with your existing <strong>Jellyfin</strong> username and password.</li>
+            <li>Search for any movie or series and tap <strong>Request</strong>. You'll receive an alert once it is downloaded and ready to watch.</li>
+          </ol>
+
+          <div class="card-footer" style="margin-top: 1.5rem;">
+            <span class="badge">Auto-Sync</span>
+            <a href="http://mageemedia.tailcc77cc.ts.net:5055" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              Launch Portal
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4: Immich (Photos & Camera Roll Backup) - 6 Col -->
+        <article class="bento-card bento-col-6">
+          <div class="card-header">
+            <div class="card-icon-wrap" style="background: rgba(16, 185, 129, 0.15); color: var(--status-success);">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <span class="badge badge-success">Private Photos</span>
+          </div>
+
+          <h2 class="card-title">Immich</h2>
+          <p class="card-desc">
+            High-performance self-hosted photo and video backup for family members. A private, ad-free replacement for Google Photos and Apple iCloud.
+          </p>
+
+          <div style="margin-top: 0.5rem;">
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Immich Server Endpoint:</span>
+            <div class="server-address-box">
+              <code>http://mageemedia.tailcc77cc.ts.net:2283</code>
+              <button class="copy-btn" data-copy="http://mageemedia.tailcc77cc.ts.net:2283" aria-label="Copy Immich server URL">
+                <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                </svg>
+                Copy
+              </button>
+            </div>
+          </div>
+
+          <div class="app-badge-grid">
+            <a href="https://apps.apple.com/app/immich/id1613994539" target="_blank" rel="noopener noreferrer" class="app-badge-link" aria-label="Download Immich on App Store">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <span>Immich iOS</span>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=app.alextran.immich" target="_blank" rel="noopener noreferrer" class="app-badge-link" aria-label="Download Immich on Google Play">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16a1 1 0 001.524.852l13-8a1 1 0 000-1.704l-13-8A1 1 0 004 4z" />
+              </svg>
+              <span>Immich Android</span>
+            </a>
+          </div>
+
+          <div class="card-footer" style="margin-top: 1.5rem;">
+            <span class="badge">Auto-Backup</span>
+            <a href="http://mageemedia.tailcc77cc.ts.net:2283" target="_blank" rel="noopener noreferrer" class="link-arrow">
+              Web Library
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Connection & Playback Setup Guide -->
+      <section id="setup-guide" style="margin-top: 4rem;">
+        <div class="hero-header-line">
+          <span class="badge badge-primary">Quick Setup</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">Connection &amp; Playback Recommendations</span>
+        </div>
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">Connection &amp; Playback Guide</h2>
+        <p style="color: var(--text-secondary); max-width: 640px;">
+          Follow these three simple best practices to ensure optimal streaming speeds and high visual fidelity anywhere in the world.
+        </p>
+
+        <div class="guide-cards-grid">
+          <div class="guide-step-card">
+            <div class="guide-step-num">STEP 01</div>
+            <h3 class="guide-step-title">Remote Access</h3>
+            <p class="guide-step-desc">
+              When outside the home network, make sure you enter the full secure URL including <code>https://</code>:
+              <br><br>
+              <code>https://mageemedia.tailcc77cc.ts.net</code>
+              <br><br>
+              Tailscale mesh encryption ensures direct, secure, end-to-end encrypted streams with zero public internet exposure.
+            </p>
+          </div>
+
+          <div class="guide-step-card">
+            <div class="guide-step-num">STEP 02</div>
+            <h3 class="guide-step-title">Video Playback Quality</h3>
+            <p class="guide-step-desc">
+              During video playback in Jellyfin or Swiftfin, tap the <strong>Gear icon</strong>.
+              <br><br>
+              If streaming on slower mobile data, switch <strong>Quality</strong> from <code>Auto</code> to <code>1080p - 10 Mbps</code> or <code>720p - 4 Mbps</code> to prevent stuttering.
+            </p>
+          </div>
+
+          <div class="guide-step-card">
+            <div class="guide-step-num">STEP 03</div>
+            <h3 class="guide-step-title">Audio &amp; Subtitles</h3>
+            <p class="guide-step-desc">
+              Jellyfin supports full subtitle selection (including forced subtitles for foreign dialogue) and multiple audio tracks (e.g. Japanese audio + English subtitles for anime).
+              <br><br>
+              Switch tracks instantly right within the video playback controls.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ & Troubleshooting Accordion -->
+      <section id="faq" style="margin-top: 4rem; margin-bottom: 3rem;">
+        <div class="hero-header-line">
+          <span class="badge">Troubleshooting</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">Common Questions &amp; Support</span>
+        </div>
+        <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">Frequently Asked Questions</h2>
+        <p style="color: var(--text-secondary); max-width: 640px; margin-bottom: 1.5rem;">
+          Everything you need to know about accounts, remote playback, offline downloads, and streaming hardware.
+        </p>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <details class="faq-item" open>
+            <summary class="faq-summary">
+              <span>I see a "Cannot connect to server" error. What should I check?</span>
+              <svg class="faq-summary-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Verify the server URL has no spaces or typos: <code>https://mageemedia.tailcc77cc.ts.net</code>. Be sure to include the full prefix <code>https://</code>.</p>
+              <p>If accessing over mobile data or external Wi-Fi, ensure your device can reach the server endpoint or that your Tailscale connection is active.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>How do I get an account?</span>
+              <svg class="faq-summary-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Contact Charlie directly with your preferred username. An account will be provisioned giving you seamless unified access across Jellyfin, Jellyseerr, and Immich.</p>
+              <p>For Plex, provide your registered Plex account email so an invite to the Magee Plex library can be sent.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Video is buffering or stuttering on iPhone or Apple TV?</span>
+              <svg class="faq-summary-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Download <a href="https://apps.apple.com/app/swiftfin/id1601048596" target="_blank" rel="noopener noreferrer"><strong>Swiftfin</strong> from the App Store</a> instead of the default Jellyfin mobile app.</p>
+              <p>Swiftfin is built specifically for Apple platforms and uses native Apple AVPlayer and VLC rendering engines for buttery-smooth hardware-accelerated 4K HDR playback and subtitle rendering.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>Can I download movies to watch offline during flights or road trips?</span>
+              <svg class="faq-summary-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p><strong>Yes!</strong> The official Jellyfin mobile app supports offline syncing for movies and TV episodes directly to your smartphone or tablet storage.</p>
+              <p>Simply navigate to any movie or episode, tap the three dots icon (<strong>⋮</strong>), and select <strong>Download</strong> while connected to Wi-Fi before traveling.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 5 -->
+          <details class="faq-item">
+            <summary class="faq-summary">
+              <span>How do media requests work in Jellyseerr?</span>
+              <svg class="faq-summary-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Log into <a href="http://mageemedia.tailcc77cc.ts.net:5055" target="_blank" rel="noopener noreferrer">Jellyseerr</a> with your Jellyfin credentials. Search for any released or upcoming movie or show and click <strong>Request</strong>.</p>
+              <p>The server automates discovery, downloading, and sorting into the appropriate library. Once processed, it will immediately appear on your Jellyfin home screen.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
+          </div>
+          <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+        </a>
+        <p>Personal digital portal hosted securely on GitHub Pages. Respects visitor privacy with zero tracking scripts.</p>
+      </div>
+
+      <div class="footer-nav">
+        <div class="footer-group">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="tools.html">Tools</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="media.html">Media Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h4>Knowledge</h4>
+          <ul>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="about.html">About &amp; Stack</a></li>
+            <li><a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer">Source Code ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>&copy; <span id="currentYear">2026</span> magrizzly. Hosted on GitHub Pages.</div>
+      <div>Open Source (MIT) · No cookies · No trackers</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

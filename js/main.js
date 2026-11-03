@@ -97,5 +97,35 @@
     if (yearEl) {
       yearEl.textContent = new Date().getFullYear();
     }
+
+    // Interactive Clipboard Copy Helper (.copy-btn)
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    copyButtons.forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const textToCopy = btn.getAttribute('data-copy');
+        if (!textToCopy) return;
+
+        try {
+          await navigator.clipboard.writeText(textToCopy);
+          const originalContent = btn.innerHTML;
+          btn.classList.add('copied');
+          btn.innerHTML = `<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Copied!`;
+          setTimeout(() => {
+            btn.innerHTML = originalContent;
+            btn.classList.remove('copied');
+          }, 2000);
+        } catch (err) {
+          // Fallback if clipboard API is restricted
+          const tempInput = document.createElement('input');
+          tempInput.value = textToCopy;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand('copy');
+          document.body.removeChild(tempInput);
+          btn.classList.add('copied');
+          setTimeout(() => btn.classList.remove('copied'), 2000);
+        }
+      });
+    });
   });
 })();
