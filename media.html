@@ -13,20 +13,21 @@
   <!-- Header Navigation -->
   <header class="site-header">
     <div class="container nav-container">
-      <a href="index.html" class="brand" aria-label="magrizzly homepage">
+      <a href="media.html" class="brand" aria-label="MageeMedia Hub">
         <div class="brand-icon">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
           </svg>
         </div>
-        <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+        <span class="brand-name">MageeMedia<span class="brand-dot">.</span></span>
       </a>
 
-      <nav aria-label="Main Navigation">
+      <nav aria-label="Media Hub Navigation">
         <ul class="nav-links" id="navLinks">
-          <li class="nav-item"><a href="index.html">Home</a></li>
-          <li class="nav-item"><a href="weeb/">Weeb</a></li>
-          <li class="nav-item"><a href="media.html" class="active">Media</a></li>
+          <li class="nav-item"><a href="#services">Services</a></li>
+          <li class="nav-item"><a href="#setup-guide">Setup Guide</a></li>
+          <li class="nav-item"><a href="#faq">FAQ</a></li>
+          <li class="nav-item"><a href="https://mageemedia.tailcc77cc.ts.net" target="_blank" rel="noopener noreferrer">Launch Jellyfin ↗</a></li>
         </ul>
       </nav>
 
@@ -93,7 +94,7 @@
       </section>
 
       <!-- Bento Grid: Core Services -->
-      <section class="bento-grid" aria-label="Core Media Services">
+      <section class="bento-grid" id="services" aria-label="Core Media Services">
         <!-- Card 1: Jellyfin (Primary Streaming) - 8 Col -->
         <article class="bento-card bento-col-8">
           <div class="card-header">
@@ -437,38 +438,41 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-brand">
-        <a href="index.html" class="brand">
+        <a href="media.html" class="brand">
           <div class="brand-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5zm4 4h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
             </svg>
           </div>
-          <span class="brand-name">magrizzly<span class="brand-dot">.</span></span>
+          <span class="brand-name">MageeMedia<span class="brand-dot">.</span></span>
         </a>
-        <p>Personal digital portal hosted securely on GitHub Pages. Respects visitor privacy with zero tracking scripts.</p>
+        <p>Private personal cloud &amp; media server portal. Stream films, TV series, anime, and automated photo backups securely over Tailscale.</p>
       </div>
 
       <div class="footer-nav">
         <div class="footer-group">
-          <h4>Pages</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="media.html">Media Hub</a></li>
-            <li><a href="weeb/">Weeb Corner</a></li>
+            <li><a href="https://mageemedia.tailcc77cc.ts.net" target="_blank" rel="noopener noreferrer">Jellyfin Web</a></li>
+            <li><a href="https://mageemedia.tailcc77cc.ts.net:8443" target="_blank" rel="noopener noreferrer">Seerr Portal</a></li>
+            <li><a href="http://mageemedia.tailcc77cc.ts.net:2283" target="_blank" rel="noopener noreferrer">Immich Photos</a></li>
+            <li><a href="https://app.plex.tv" target="_blank" rel="noopener noreferrer">Plex Web</a></li>
           </ul>
         </div>
         <div class="footer-group">
-          <h4>Links</h4>
+          <h4>Resources</h4>
           <ul>
-            <li><a href="https://github.com/magrizzly/magrizzly.github.io" target="_blank" rel="noopener noreferrer">Source Code ↗</a></li>
+            <li><a href="#services">Services Overview</a></li>
+            <li><a href="#setup-guide">Setup Guide</a></li>
+            <li><a href="#faq">Troubleshooting &amp; FAQ</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <div>&copy; <span id="currentYear">2026</span> magrizzly. Hosted on GitHub Pages.</div>
-      <div>Open Source (MIT) · No cookies · No trackers</div>
+      <div>&copy; <span id="currentYear">2026</span> MageeMedia. Self-hosted on private mesh.</div>
+      <div>Encrypted Mesh · Zero Tracking · Private Cloud</div>
     </div>
   </footer>
 

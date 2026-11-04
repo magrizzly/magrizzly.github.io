@@ -77,6 +77,16 @@
           mobileMenuBtn.setAttribute('aria-expanded', 'false');
         }
       });
+
+      // Close mobile menu when clicking any nav link
+      navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
     }
 
     // Active Navigation Link Highlighter
